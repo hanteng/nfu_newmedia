@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 
 def search4prepositions_zhs(phrase: str) -> set:
     """Return any prepositions found in a supplied phrase."""
