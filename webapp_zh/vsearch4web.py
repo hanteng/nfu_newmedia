@@ -30,7 +30,7 @@ def do_search() -> 'html':
 def entry_page() -> 'html':
     """Display this webapp's HTML form."""
     return render_template('entry.html',
-                           the_title='欢迎来到网上 汉语找介词！')
+                           the_title='欢迎来到网上 国家找经典景点！')
 
 
 @app.route('/viewlog')
