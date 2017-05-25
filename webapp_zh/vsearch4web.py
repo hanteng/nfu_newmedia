@@ -30,7 +30,7 @@ def do_search() -> 'html':
 def entry_page() -> 'html':
     """Display this webapp's HTML form."""
     return render_template('entry.html',
-                           the_title='欢迎来到网上 汉语找介词！')
+                           the_title='花名检索！')
 
 
 @app.route('/viewlog')
@@ -42,7 +42,7 @@ def view_the_log() -> 'html':
             contents.append([])
             for item in line.split('|'):
                 contents[-1].append(escape(item))
-    titles = ('表单内容', '访问者IP', '浏览器', '运行结果')
+    titles = ('花名', '花语', '所属界', '所属门','所属科')
     return render_template('viewlog.html',
                            the_title='查看日志',
                            the_row_titles=titles,
