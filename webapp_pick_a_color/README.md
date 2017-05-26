@@ -39,7 +39,6 @@ flask html模版档，用户输出结果页使用
 
 7. pick_a_color() 函数，几乎什麽也没做，只有把用户提交的数据，以flask 模块request.form['user_color'] （注意第一行代码 from flask import Flask, render_template, request, escape 有request，是从flask模块调用的）取到Web 请求中，HTML表单变数名称user_color的值，存放在user_color这Python变数下，再使用flask模块render_template 函数把results.html模版（输出），其中模版中the_color的值，用user_color这变数之值。
 
-8.前端浏览器收到web 响应：results.html模版中the_color的值正确的产生的话，前端浏览器会收到正确响应，看到颜色代码。
-
+8. 前端浏览器收到web 响应：results.html模版中the_color的值正确的产生的话，前端浏览器会收到正确响应，看到颜色代码。
 
 

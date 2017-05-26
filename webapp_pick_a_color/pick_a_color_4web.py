@@ -3,6 +3,12 @@ from flask import Flask, render_template, request, escape
 
 app = Flask(__name__)
 
+@app.route('/')
+@app.route('/entry')
+def entry_page() -> 'html':
+    """Display this webapp's HTML form."""
+    return render_template('entry.html',
+                           the_title='欢迎来到网上选色！')
 
 @app.route('/pick_a_color', methods=['POST'])
 def pick_a_color() -> 'html':
@@ -12,14 +18,6 @@ def pick_a_color() -> 'html':
                            the_title = '以下是您选取的颜色：',
                            the_color = user_color,
                            )
-
-
-@app.route('/')
-@app.route('/entry')
-def entry_page() -> 'html':
-    """Display this webapp's HTML form."""
-    return render_template('entry.html',
-                           the_title='欢迎来到网上选色！')
 
 if __name__ == '__main__':
     app.run(debug=True)
