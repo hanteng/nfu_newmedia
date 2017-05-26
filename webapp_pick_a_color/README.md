@@ -16,10 +16,11 @@ python webapp_pick_a_color.py
 基本flask html模版档
 
 #### entry.html
-flask html模版档，用户输入页使用
+flask html模版档，用户输入页使用 def entry_page() 'html': #使用了 entry.html
 
-#### base.html
-flask html模版档，用户输出结果页使用
+#### results.html
+flask html模版档，用户输出结果页使用 def pick_a_color() -> 'html': #使用了 results.html
+
 
 ## Web App动作描述
 
@@ -30,6 +31,9 @@ flask html模版档，用户输出结果页使用
 2. 前端浏览器web 请求：访问 http://127.0.0.1:5000/ 启动前端web 请求
 
 3. 後端伺服器web 响应：webapp_pick_a_color.py 中 执行 了@app.route('/') 下的 entry_page()函数，产生《欢迎来到网上选色》的HTML页面
+def entry_page() -> 'html': #使用了 entry.html
+    ...略...
+    return render_template('entry.html',
 
 4. 前端浏览器收到web 响应：出现HTML，有HTML5表单的输入 input 类型(type) 为"color"，变数名称(name)为"user_color"
 
@@ -37,8 +41,10 @@ flask html模版档，用户输出结果页使用
 
 6. 後端服务器收到用户web 请求，匹配到@app.route('/pick_a_color', methods=['POST'])的函数 pick_a_color() 
 
-7. pick_a_color() 函数，几乎什麽也没做，只有把用户提交的数据，以flask 模块request.form['user_color'] （注意第一行代码 from flask import Flask, render_template, request, escape 有request，是从flask模块调用的）取到Web 请求中，HTML表单变数名称user_color的值，存放在user_color这Python变数下，再使用flask模块render_template 函数把results.html模版（输出），其中模版中the_color的值，用user_color这变数之值。
+7. def pick_a_color() 函数，几乎什麽也没做，只有把用户提交的数据，以flask 模块request.form['user_color'] （注意第一行代码 from flask import Flask, render_template, request, escape 有request，是从flask模块调用的）取到Web 请求中，HTML表单变数名称user_color的值，存放在user_color这Python变数下，再使用flask模块render_template 函数把results.html模版（输出），其中模版中the_color的值，用user_color这变数之值。
+def pick_a_color() -> 'html': #使用了 results.html
+    ...略...
+    return render_template('results.html', 以下略
 
 8. 前端浏览器收到web 响应：results.html模版中the_color的值正确的产生的话，前端浏览器会收到正确响应，看到颜色代码。
-
 
