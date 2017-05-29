@@ -8,9 +8,16 @@
 <table>
 <tr><td>短语：</td><td>{{ the_phrase }}</td></tr>
 <tr><td>介词：</td><td>{{ the_letters }}</td></tr>
+<tr><td>顏色：</td><td>{{ the_color }}</td></tr>
 </table>
 
-<p>在"{{the_phrase }}" 中搜索 "{{ the_letters }}",返回以下结果：</p>
+<p>在</p>
+
+<blockquote>{{the_phrase }}</blockquote>
+
+<p>中搜索</p>
+<blockquote>{{ the_letters }}</blockquote>
+<p>返回以下结果：</p>
 <h3>{{ the_results }}</h3>
 
 {% endblock %}

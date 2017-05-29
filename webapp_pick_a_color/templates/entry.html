@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h2>{{ the_title }}</h2>
+
+<form method='POST' action='/pick_a_color'>
+<table>
+<th colspan="2">请选取颜色：</th>
+<tr><td>颜色: </td><td><input type="color" name="user_color" /></td></tr>
+</table>
+<p>准备就绪后, 单击此按钮：</p>
+<p><input value='搞吧！' type='SUBMIT'></p>
+</form>
+
+{% endblock %}
