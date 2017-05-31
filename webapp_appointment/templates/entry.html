@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h2>{{ the_title }}</h2>
+
+<form method='POST' action='/appointment'>
+<table>
+<th colspan="2">请提交預约：</th>
+<tr><td>E-mail: </td><td><input type="email" name="user_email" /></td></tr>
+<tr><td>Github ID: </td><td><input type="text" name="user_github" /></td></tr>
+<tr><td>Date: </td><td><input type="date" name="user_date" /></td></tr>
+<tr><td>Time: </td><td><input type="time" name="user_time" /></td></tr>
+</table>
+<p>准备就绪后, 单击此按钮：</p>
+<p><input value='搞吧！' type='SUBMIT'></p>
+</form>
+
+{% endblock %}

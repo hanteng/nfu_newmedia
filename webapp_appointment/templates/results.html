@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h2>{{ the_title }}</h2>
+
+<p>您提交了以下預约：</p>
+<table>
+<tr><td>ID：</td><td>{{ the_id }}</td></tr>
+<tr><td>始：</td><td>{{ the_dt_begin }}</td></tr>
+<tr><td>止：</td><td>{{ the_dt_end }}</td></tr>
+<tr><td>Email：</td><td>{{ the_email }}</td></tr>
+</table>
+
+{% endblock %}
