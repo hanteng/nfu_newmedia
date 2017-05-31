@@ -2,7 +2,7 @@
 # 使用模块module country
 import country  
 c = country.country_list_name()
-c_list = c.data.values()
+c_list = [c.data[k] for k in sorted(c.data.keys())]
 c_dict_reverse = {v:k for k, v in c.data.items()}
 
 
