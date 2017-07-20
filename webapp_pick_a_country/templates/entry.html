@@ -8,11 +8,12 @@
 <table>
 <th colspan="2">请选取国家：</th>
 <tr><td>国家: </td><td>
-  <select name='user_country'>
-  {% for item in the_list_items %}
-    <option value="{{item}}">{{item}}</option>
-  {% endfor %}
-  </select>
+  <input type="text" name='user_country' list="countries" placeholder="如. CN 或 中国" />
+    <datalist id="countries">
+    {% for (k, v) in the_list_items %}
+      <option value="{{k}}">{{v}}</option>
+    {% endfor %}
+    </datalist>
 </td></tr>
 </table>
 <p>准备就绪后, 单击此按钮：</p>
